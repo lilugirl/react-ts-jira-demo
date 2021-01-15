@@ -23,6 +23,25 @@ export const useMount = (callback: () => void) => {
   }, []);
 };
 
+export const useArray = <T>(initialArray: T[]) => {
+  const [value, setValue] = useState(initialArray);
+  return {
+    value,
+    setValue,
+    add: (item: T) => {
+      setValue([...value, item]);
+    },
+    clear: () => {
+      setValue([]);
+    },
+    removeIndex: (index: number) => {
+      let copy = [...value];
+      copy.splice(index, 1);
+      setValue(copy);
+    },
+  };
+};
+
 // export const debounce=(func,delay)=>{
 //   let timeout;
 //   return (...param)=>{
