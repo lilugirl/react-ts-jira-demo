@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const isTruthy = (value: any) => (value === 0 ? true : !!value);
+export const isTruthy: (value: unknown) => boolean = (value) =>
+  value === 0 ? true : !!value;
 
 export const cleanObject = (obj: object) => {
   const result = { ...obj };
@@ -35,7 +36,7 @@ export const useMount = (callback: () => void) => {
 //   }
 // }
 
-export const useDebounce = (value: any, delay?: number) => {
+export const useDebounce = (value: unknown, delay?: number): any => {
   const [debouncedValue, setDeboucedValue] = useState(value);
   useEffect(() => {
     const timeout = setTimeout(() => {
