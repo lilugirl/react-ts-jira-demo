@@ -15,7 +15,7 @@ export const UnauthenticatedApp = () => {
       <ShadowCard>
         <Title>{isRegister ? "请注册" : "请登录"}</Title>
         {isRegister ? <RegisterScreen /> : <LoginScreen />}
-        <a onClick={() => setIsRegister(!isRegister)}>
+        <a href="void(0)" onClick={() => setIsRegister(!isRegister)}>
           切换到 {isRegister ? "登录" : "注册"}
         </a>
       </ShadowCard>
