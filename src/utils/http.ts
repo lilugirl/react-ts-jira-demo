@@ -42,6 +42,7 @@ export const http = async (
 
 export const useHttp = () => {
   const { user } = useAuth();
+  // utility types
   return (...[enpoint, config]: Parameters<typeof http>) =>
     http(enpoint, { ...config, token: user?.token });
 };

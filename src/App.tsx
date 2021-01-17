@@ -5,6 +5,7 @@ import { UnauthenticatedApp } from "unauthenticated-app";
 // import { TsReactTest } from "screens/project-list/try-use-array";
 // import { ProjectListScreen } from "screens/project-list/index";
 import "./App.css";
+
 import { AuthenticatedApp } from "authenticated-app";
 
 function App() {
