@@ -2,7 +2,7 @@ import { useAuth } from "context/auth-context";
 import React from "react";
 import { ProjectListScreen } from "screens/project-list";
 import styled from "@emotion/styled";
-import { Dropdown, Menu } from "antd";
+import { Button, Dropdown, Menu } from "antd";
 import { Row } from "components/lib";
 import { ReactComponent as SoftwareLogo } from "assets/software-logo.svg";
 
@@ -24,16 +24,17 @@ export const AuthenticatedApp = () => {
             overlay={
               <Menu>
                 <Menu.Item key="logout">
-                  <a href="void(0)" onClick={logout}>
+                  <Button type="link" onClick={logout}>
+                    {" "}
                     登出
-                  </a>
+                  </Button>
                 </Menu.Item>
               </Menu>
             }
           >
-            <a href="void(0)" onClick={(e) => e.preventDefault()}>
+            <Button onClick={(e) => e.preventDefault()} type="link">
               Hi {user?.name}
-            </a>
+            </Button>
           </Dropdown>
         </HeaderRight>
       </Header>

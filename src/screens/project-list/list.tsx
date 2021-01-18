@@ -2,7 +2,9 @@ import React from "react";
 import { User } from "./search-panel";
 import { Table } from "antd";
 import dayjs from "dayjs";
-interface Project {
+import { TableProps } from "antd/lib/table";
+export interface Project {
+  key?: string;
   id: string;
   name: string;
   personId: string;
@@ -11,13 +13,13 @@ interface Project {
   created: number;
 }
 
-interface ListProps {
-  list: Project[];
+interface ListProps extends TableProps<Project> {
   users: User[];
 }
-export const List = ({ list, users }: ListProps) => {
+export const List = ({ users, ...props }: ListProps) => {
   return (
     <Table
+      rowKey={"id"}
       pagination={false}
       columns={[
         {
@@ -42,6 +44,7 @@ export const List = ({ list, users }: ListProps) => {
         },
         {
           title: "创建时间",
+          key: "created",
           render(value, project) {
             return (
               <span>
@@ -53,7 +56,7 @@ export const List = ({ list, users }: ListProps) => {
           },
         },
       ]}
-      dataSource={list}
-    ></Table>
+      {...props}
+    />
   );
 };
