@@ -8,6 +8,9 @@ import "./App.css";
 
 import { AuthenticatedApp } from "authenticated-app";
 
+import { FullPageErrorFallback } from "components/lib";
+import { ErrorBoundary } from "components/error-boundary";
+
 function App() {
   const { user } = useAuth();
   return (
@@ -15,7 +18,10 @@ function App() {
       {/* <ProjectListScreen /> */}
 
       {/* <TsReactTest/> */}
-      {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
+
+      <ErrorBoundary fallbackRender={FullPageErrorFallback}>
+        {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
+      </ErrorBoundary>
     </div>
   );
 }
