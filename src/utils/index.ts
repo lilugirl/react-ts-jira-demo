@@ -89,3 +89,5 @@ export const useDocumentTitle = (
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };
+
+export const resetRoute = () => (window.location.href = window.location.origin);
