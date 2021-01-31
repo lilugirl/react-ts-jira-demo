@@ -10,7 +10,6 @@ import { Typography } from "antd";
 import { useProjects } from "utils/project";
 import { useUsers } from "utils/user";
 import { useDocumentTitle } from "utils";
-import { Test } from "./test";
 
 export const ProjectListScreen = () => {
   const [param, setParam] = useState({
@@ -31,7 +30,7 @@ export const ProjectListScreen = () => {
   return (
     <Container>
       <h1>项目列表</h1>
-      <Test />
+
       <SearchPanel param={param} setParam={setParam} users={users || []} />
       {error ? (
         <Typography.Text type={"danger"}>{error.message}</Typography.Text>

@@ -2434,6 +2434,13 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@welldone-software/why-did-you-render@^6.0.5":
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/@welldone-software/why-did-you-render/-/why-did-you-render-6.0.5.tgz#a8df3509ed612770bb21b5fa0ad61634acc61f38"
+  integrity sha512-8fWib+bKoAmnJHZPU8/qpEXKG8piB3oaoKj78fXNAdYd3x8ryde1pC7D5tKff5Mart2iOJUvYNxxcYlbtT9tow==
+  dependencies:
+    lodash "^4"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -7643,7 +7650,7 @@ jest@26.6.0:
 
 jira-dev-tool@^1.6.13:
   version "1.7.8"
-  resolved "https://registry.npmjs.org/jira-dev-tool/-/jira-dev-tool-1.7.8.tgz#f0c83c9f1d56da948542bcc07f60c124673418eb"
+  resolved "https://registry.yarnpkg.com/jira-dev-tool/-/jira-dev-tool-1.7.8.tgz#f0c83c9f1d56da948542bcc07f60c124673418eb"
   integrity sha512-mbi/9ZUVNOKbDv7DjiNF37E+sMDxhPjWzjJ6R8B50VizKJkG8gzkP0Mtspigu0howrzWyJFITA9YFTRShx89kw==
   dependencies:
     antd "^4.9.1"
@@ -7653,7 +7660,7 @@ jira-dev-tool@^1.6.13:
 
 jira-dev-tool@^1.6.55:
   version "1.6.55"
-  resolved "https://registry.npmjs.org/jira-dev-tool/-/jira-dev-tool-1.6.55.tgz#f3425cb171ce7b7b69d3fd833caba0defa412904"
+  resolved "https://registry.yarnpkg.com/jira-dev-tool/-/jira-dev-tool-1.6.55.tgz#f3425cb171ce7b7b69d3fd833caba0defa412904"
   integrity sha512-yZU7V+e+T6ATi0CjpNBtwQAbg3A6LseifxgERPicrvamG0Jrdzv6SyzOV2P8r02GgfMh+OblvPVX9Xja0utwEA==
   dependencies:
     antd "^4.9.1"
@@ -8131,7 +8138,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4, "lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.5:
+lodash@4, "lodash@>=3.5 <5", lodash@^4, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.5:
   version "4.17.20"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
@@ -10875,7 +10882,15 @@ react-query@^2.26.3:
   dependencies:
     "@babel/runtime" "^7.5.5"
 
-react-query@^3.5.10, react-query@^3.5.15:
+react-query@^3.5.10:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.6.0.tgz#3da307a4a4cb6ea95f9c95b7e50b5281d5244e4d"
+  integrity sha512-39ptLt4qaKO1DE+ta6SpPutweEgDvUQj/KlebC+okJ9Nxbs5ExxKV8RYlLeop6vdDFyiMmwYrt1POiF8oWGh1A==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    match-sorter "^6.0.2"
+
+react-query@^3.5.15:
   version "3.5.15"
   resolved "https://registry.npmjs.org/react-query/-/react-query-3.5.15.tgz#2391e06ce42ad3854eda12c9983e8783efa57b27"
   integrity sha512-npGgphvqJ2KQ3brsA0ddKjFslLwxDmDlQcABKJv/B3fWdPQuLADVTmiFflF3UHk7yIQRhggNLRgBzgwQt/UYZg==

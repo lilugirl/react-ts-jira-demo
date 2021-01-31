@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const isVoid = (value: unknown) =>
   value === undefined || value === null || value === "";
@@ -73,7 +73,7 @@ export const useDocumentTitle = (
   title: string,
   keepOnUnmount: boolean = true
 ) => {
-  const oldTitle = document.title;
+  const oldTitle = useRef(document.title).current;
   console.log("渲染时的oldTitle", oldTitle);
   useEffect(() => {
     document.title = title;
@@ -86,8 +86,7 @@ export const useDocumentTitle = (
         document.title = oldTitle;
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [oldTitle, keepOnUnmount]);
 };
 
 export const resetRoute = () => (window.location.href = window.location.origin);
